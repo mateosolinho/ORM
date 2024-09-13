@@ -3,7 +3,7 @@ name: Deploy Bot
 on:
   push:
     branches:
-      - main  # o el nombre del branch que prefieras
+      - main
 
 jobs:
   deploy:
@@ -24,7 +24,7 @@ jobs:
 
       - name: Run bot
         run: |
-          python your_bot_script.py
+          python bot.py
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
           API_KEY: ${{ secrets.API_KEY }}
